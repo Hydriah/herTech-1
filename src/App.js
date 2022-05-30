@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // pages
@@ -8,20 +9,21 @@ import Forgotpassword from './pages/Forgotpassword'
 import Home from './pages/Home'
 import Navbar from './component/Navbar';
 
-function App() {
+export default function App() {
   return (
     <div className='w-full h-screen bg-gray-200'>
       <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="forgotpassword" element={<Forgotpassword />} />
       </Routes>
     </BrowserRouter>
     </div>
-  );
+  
+  )
 }
 
-export default App;
+
